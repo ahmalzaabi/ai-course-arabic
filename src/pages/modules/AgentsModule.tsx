@@ -1,5 +1,6 @@
 import ModuleShell, { Section, ActivityCard, Callout } from '../../components/ModuleShell';
 import AgentBuilder from '../../activities/AgentBuilder';
+import RealAgentDemo from '../../activities/RealAgentDemo';
 
 export default function AgentsModule() {
   return (
@@ -92,12 +93,21 @@ export default function AgentsModule() {
         </ul>
       </Section>
 
-      <ActivityCard title="ابنِ وكيلك بنفسك" kicker="Activity 5">
+      <ActivityCard title="حلقة ReAct بالأمثلة" kicker="Activity 5a · Simulated">
         <p className="text-sm text-ink-300 mb-3 leading-loose">
           اختر هدفاً، ثم شاهد كيف يُفكّر الوكيل خطوة بخطوة، يختار أداة، ويُلاحظ النتيجة.
           اضبط الأدوات المتاحة وشاهد كيف يتغيّر سلوكه.
         </p>
         <AgentBuilder />
+      </ActivityCard>
+
+      <ActivityCard title="وكيل حقيقي يستدعي APIs مباشرة" kicker="Activity 5b · Live APIs">
+        <p className="text-sm text-ink-300 mb-3 leading-loose">
+          هنا الوكيل لا يُحاكي — بل يُجري <strong>استدعاءات HTTP حقيقية</strong> إلى ثلاث واجهات برمجية مفتوحة ومجّانية بدون مفاتيح:
+          <span className="en"> Wikipedia REST</span>، <span className="en">Open-Meteo</span>، <span className="en">REST Countries</span>.
+          اختر هدفاً، ثم اكتب استعلامك، وراقب الحلقة وهي تنفّذ.
+        </p>
+        <RealAgentDemo />
       </ActivityCard>
     </ModuleShell>
   );

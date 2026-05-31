@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Sparkles, ShieldCheck, Cpu, GraduationCap } from 'lucide-react';
+import { ArrowLeft, Sparkles, Cpu, GraduationCap, Globe } from 'lucide-react';
 import { modules } from '../modules';
 import { loadProgress } from '../progress';
 import { useEffect, useState } from 'react';
@@ -31,8 +31,8 @@ export default function Home() {
             <br />بأسلوب تفاعلي وعملي.
           </h1>
           <p className="text-ink-300 text-lg mt-5 max-w-2xl leading-loose">
-            ثمان وحدات قصيرة تشرح المفاهيم من الصفر، مع نشاط تفاعلي داخل كل وحدة يعمل بالكامل في متصفّحك —
-            بدون كاميرا، بدون تسجيل دخول، وبدون رفع أي بيانات.
+            ثمان وحدات قصيرة تشرح المفاهيم من الصفر، مع أنشطة تفاعلية حقيقية داخل كل وحدة:
+            دَرّب نموذجاً، استخدم نماذج جاهزة، واستدعِ <span className="en">APIs</span> مفتوحة لبناء وكلاء أذكياء.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link to={`/module/${modules[0].slug}`} className="btn-primary text-base">
@@ -44,8 +44,8 @@ export default function Home() {
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl">
             {[
               { icon: <GraduationCap className="h-5 w-5" />, label: 'صفر معرفة مسبقة', en: 'Beginner-friendly' },
-              { icon: <Cpu className="h-5 w-5" />, label: 'أنشطة داخل المتصفح', en: 'In-browser demos' },
-              { icon: <ShieldCheck className="h-5 w-5" />, label: 'بدون كاميرا أو رفع', en: 'Privacy-first' },
+              { icon: <Cpu className="h-5 w-5" />, label: 'دَرِّب نماذج فعلية', en: 'Train real models' },
+              { icon: <Globe className="h-5 w-5" />, label: 'تستخدم APIs مفتوحة', en: 'Open APIs included' },
               { icon: <Sparkles className="h-5 w-5" />, label: 'وحدة عن الوكلاء', en: 'Includes Agentic AI' },
             ].map((f, i) => (
               <div key={i} className="rounded-xl border border-ink-700/60 bg-ink-900/40 p-3 flex items-center gap-3">

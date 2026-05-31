@@ -1,5 +1,5 @@
 import ModuleShell, { Section, ActivityCard, Callout } from '../../components/ModuleShell';
-import RuleVsLearnGame from '../../activities/RuleVsLearnGame';
+import TeachableClassifier from '../../activities/TeachableClassifier';
 
 export default function IntroModule() {
   return (
@@ -81,12 +81,13 @@ export default function IntroModule() {
         </ul>
       </Section>
 
-      <ActivityCard title="نشاط: قاعدة أم تعلّم؟" kicker="Activity 1">
+      <ActivityCard title="درّب مصنّفك الأول" kicker="Activity 1 · Like Teachable Machine">
         <p className="text-sm text-ink-300 mb-4 leading-loose">
-          سنُحاول تصنيف صور <strong>دبابة</strong> مقابل <strong>شاحنة</strong>. جرّب أن تكتب قواعد بنفسك،
-          ثم شاهد كيف تنهار القواعد عند ظهور حالة جديدة — ولماذا نلجأ إلى التعلّم من الأمثلة.
+          سنبني معاً مصنّف صور لثلاث فئات: <strong>دبابة</strong>، <strong>شاحنة عسكرية</strong>، <strong>طائرة مقاتلة</strong>.
+          أضف عيّنات جاهزة أو ارفع صورك الخاصة، ثم اضغط "تدريب" — سيستخرج النموذج <span className="en">features</span> من كل صورة
+          ويتعلّم الفروق. بعدها جرّب صوراً جديدة وشاهد التنبّؤ.
         </p>
-        <RuleVsLearnGame />
+        <TeachableClassifier />
       </ActivityCard>
     </ModuleShell>
   );

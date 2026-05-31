@@ -132,8 +132,8 @@ export default function Layout() {
 
       <footer className="border-t border-ink-800/70 mt-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 text-center text-xs text-ink-400">
-          <p>دورة تعليمية تفاعلية · جميع الأنشطة تعمل بالكامل داخل المتصفح بدون رفع بيانات.</p>
-          <p className="mt-1 en text-[11px] text-ink-500">Built with React, TensorFlow.js-free in-browser demos · Static deploy on Netlify.</p>
+          <p>دورة تعليمية تفاعلية · أنشطة داخل المتصفح + استدعاءات APIs مفتوحة (لا تحتاج مفاتيح).</p>
+          <p className="mt-1 en text-[11px] text-ink-500">Built with React + TensorFlow.js (MobileNet) + Wikipedia / Open-Meteo / REST Countries APIs · Deployed on Netlify.</p>
         </div>
       </footer>
     </div>

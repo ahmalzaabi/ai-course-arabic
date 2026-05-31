@@ -1,5 +1,6 @@
 import ModuleShell, { Section, ActivityCard, Callout } from '../../components/ModuleShell';
 import DigitClassifier from '../../activities/DigitClassifier';
+import MobileNetClassifier from '../../activities/MobileNetClassifier';
 
 export default function VisionModule() {
   return (
@@ -48,13 +49,21 @@ export default function VisionModule() {
         </div>
       </Section>
 
-      <ActivityCard title="ارسم رقماً واترك النموذج يخمّنه" kicker="Activity 3">
+      <ActivityCard title="ارسم رقماً واترك النموذج يخمّنه" kicker="Activity 3a">
         <p className="text-sm text-ink-300 mb-4 leading-loose">
           ارسم رقماً (من <span className="en">0 إلى 9</span>) في المربّع باستخدام الفأرة أو الإصبع.
-          النموذج (مدرّب مسبقاً على بيانات <span className="en">MNIST</span>) يحلّل البكسلات ويعرض احتماله لكل رقم.
-          لاحظ أنه يعمل بكامل قواه داخل متصفّحك — بدون كاميرا أو إنترنت.
+          النموذج يحلّل البكسلات ويعرض احتماله لكل رقم. كل شيء يحدث داخل متصفّحك بدون أي خادم.
         </p>
         <DigitClassifier />
+      </ActivityCard>
+
+      <ActivityCard title="مصنّف صور حقيقي بآلاف الفئات" kicker="Activity 3b · Real CNN">
+        <p className="text-sm text-ink-300 mb-4 leading-loose">
+          هذه المرة نُحمّل شبكة <span className="en">CNN</span> حقيقية (<span className="en">MobileNet v2</span>) دُرّبت على ملايين الصور
+          و<span className="en">1000 فئة</span>. ارفع أيّ صورة، أو جرّب صوراً جاهزة من <span className="en">picsum.photos</span> (واجهة برمجية مجّانية).
+          الشبكة ستُعطيك أعلى 5 توقّعات.
+        </p>
+        <MobileNetClassifier />
       </ActivityCard>
 
       <Section title="حدود الرؤية الحاسوبية" kicker="Limitations">
